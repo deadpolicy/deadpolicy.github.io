@@ -1,0 +1,90 @@
+    <!DOCTYPE html> 
+    <html lang="en"> 
+    <head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Weston Shultz Career Goals</title> 
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    </head> 
+    <body> 
+    <header>
+        <h1>Weston Shultz</h1>
+        <p>
+        <span>Aspiring Security Analyst / Network administrator</span><br>
+        Phone Number: 814-660-9069 <br>
+        Email: <a href="mailto:weston.shultz52@gmail.com">weston.shultz52@gmail.com</a>
+        </p>
+
+        <nav>
+        <ul>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="cover-letter.html">Cover Letter</a></li>
+            <li><a href="career-goals.html">Career Goals</a></li>
+        </ul>
+        </nav>
+
+        <hr>
+
+    </header>
+    
+        <main>
+            <section id="Audio">
+            <h2>Audio</h2>
+            <audio controls volume="0.2">
+                <source src="Audio/stock_technology_synth.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+             </audio>
+
+             <hr>
+
+            <section id="Images">
+            <h2>Images</h2>
+            <div>
+                <img src="images/Security_Analyst.jpg" alt="Security Analyst monitoring network traffic" width="48%">
+                <img src="images/Network_Topology.jpg" alt="Enterprise Network Topology diagram" width="48%">
+            </div>
+            </section>
+
+            <section id="career-goals">
+            <h2>Career Goals</h2>
+            <p>
+                My career goal is to become a proficient and skilled Security Analyst / Network Administrator, contributing to the protection and optimization of networks. I aim to continuously enhance my knowledge in cybersecurity, network management, and emerging technologies to stay ahead in the evolving IT landscape. By leveraging my technical skills, problem-solving abilities, and dedication to learning, I aspire to make a meaningful impact in the field of information security and network administration.
+            </p>
+            </section>
+
+            <hr>
+
+            <section id="Video">
+            <h2>Video</h2>
+            <video controls width="100%">
+                <source src="Video/Server_stock_clip.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+            </section>
+        </main>
+    <!-- I need a user submit form here -->
+        <hr>
+
+    <footer>
+        <p></p>
+        <div id="current-date"></div>
+    </footer>
+
+    <script>
+        const dateContainer = document.getElementById("current-date");
+        const today = new Date();
+        
+        dateContainer.textContent = today.toLocaleDateString() +" " + today.toLocaleTimeString([],  
+    {
+        hour: 'numeric',
+        minute: '2-digit'
+    }) + " Property of Weston Shultz";;
+
+        console.log("Weston Shultz Career Goals loaded successfully on " + dateContainer.textContent + ".");
+    </script>
+
+    </body> 
+    </html> 
