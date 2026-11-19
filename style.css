@@ -1,11 +1,10 @@
-
 :root 
 {
   --bg-page: #dfe4ea;
   --bg-surface: #0a0909;
   --bg-subtle: #878b8b;
   --text-main: #0f172a;
-  --text-muted: #475569;
+  --text-muted: #16181a;
   --accent: #1e3a8a;
   --accent-light: #dbeafe;
   --border-color: #cbd5e1;
@@ -33,14 +32,12 @@ body
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
 }
 
-
 hr 
 {
   border: 2px solid var(--border-color);
   border-top: 3px solid rgba(0, 0, 0, 0.651);
   margin: 1.75rem 0;
 }
-
 
 header 
 {
@@ -61,6 +58,7 @@ header p
   margin-top: 0.4rem;
   font-size: 0.95rem;
   color: var(--text-muted);
+  overflow-wrap: break-word;
 }
 
 header p span 
@@ -83,7 +81,6 @@ header a:hover
 {
   text-decoration: underline;
 }
-
 
 nav 
 {
@@ -122,7 +119,6 @@ nav li a:hover
   text-decoration: none;
 }
 
-
 section h2 
 {
   font-size: 1.15rem;
@@ -145,7 +141,6 @@ strong
   color: var(--text-main);
   font-weight: 600;
 }
-
 
 table 
 {
@@ -196,7 +191,6 @@ tbody tr:hover
   background-color: var(--accent-light);
 }
 
-
 article 
 {
   margin-bottom: 1.5rem;
@@ -219,6 +213,8 @@ article > p
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0.15rem 0 0.5rem 0;
@@ -260,6 +256,7 @@ main li
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 #Education > article > ul > li:first-child 
@@ -274,12 +271,26 @@ main li
   font-size: 0.88rem;
 }
 
-#Education > article > ul > ul 
+#Education > article > ul ul 
 {
+  width: 100%;
   list-style: disc;
   padding-left: 1.4rem;
+  margin-top: 0.35rem;
   margin-bottom: 0.5rem;
   color: var(--text-muted);
+  font-weight: 400;
+}
+
+#Portfolio > article > ul ul 
+{
+  width: 100%;
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 400;
 }
 
 footer 
@@ -295,6 +306,7 @@ footer
   font-weight: 500;
 }
 
+/* Mobile friendly code for screens 650px and smaller */
 @media (max-width: 650px) 
 {
   body 
@@ -303,6 +315,42 @@ footer
     padding: 1.5rem 1.25rem;
     border-radius: 0;
     border: none;
+    box-shadow: none;
+  }
+
+  header h1 
+  {
+    font-size: 1.75rem;
+  }
+
+  nav ul 
+  {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  nav li 
+  {
+    width: 100%;
+  }
+
+  nav li a 
+  {
+    display: block;
+    text-align: center;
+    padding: 0.6rem 0.85rem;
+  }
+
+  article > p 
+  {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #Education > article > ul > li 
+  {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   table, thead, tbody, th, td, tr 
@@ -328,6 +376,14 @@ footer
     border: none;
     padding: 0.35rem 0.5rem;
   }
+
+  td:first-child 
+  {
+    font-weight: 700;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.25rem;
+  }
 }
 
 mark 
@@ -337,6 +393,13 @@ mark
   padding: 0.12rem 0.4rem;
   border-radius: 4px;
 }
+
+.subtitle 
+{
+  font-style: italic;
+  color: rgb(0, 0, 0);
+}
+
 @media print 
 {
   body 
